@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Text,
-  View
-} from 'react-native';
+import { Platform, Text, View } from 'react-native';
 
 type Props = {};
 
@@ -10,7 +7,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View>
-        <Text style={{ fontSize: 28, fontFamily: 'Roboto' }}>aaa Roboto</Text>
+        {Platform.OS === 'android' && <Text style={{ fontSize: 28, fontFamily: 'Roboto' }}>aaa Roboto</Text>}
         <Text style={{ fontSize: 28, fontFamily: 'Montserrat-Bold' }}>aaa Montserrat-Bold</Text>
         <Text style={{ fontSize: 28, fontFamily: 'Montserrat-Regular' }}>aaa Montserrat-Regular</Text>
         <Text style={{ fontSize: 28, fontFamily: 'Montserrat-Thin' }}>aaa Montserrat-Thin</Text>
